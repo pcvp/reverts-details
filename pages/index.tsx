@@ -1,6 +1,6 @@
 import axios from "axios";
 import moment from "moment";
-import { CommitsResponse, InfosDosCommits } from "./interfaces";
+import { CommitsResponse, InfosDosCommits } from "../interfaces/interfaces";
 
 export async function getServerSideProps() {
   try {
