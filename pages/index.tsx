@@ -49,7 +49,7 @@ interface HomePageProps {
   ultimoRollback: InfosDosCommits;
 }
 
-export default function ({ ultimoRollback }: HomePageProps) {
+const Home = function ({ ultimoRollback }: HomePageProps) {
   const { date, htmlUrl } = ultimoRollback;
 
   const dataDoUltimoAcidente = moment(date);
@@ -73,10 +73,17 @@ export default function ({ ultimoRollback }: HomePageProps) {
       <div className="bg-orange rounded-lg text-white uppercase mt-20 p-5 text-center font-semibold text-2xl">
         Colabore você também com o aumento desse índice
         <br />
-        <a href={htmlUrl} target="_blank" className="text-xs capitalize">
+        <a
+          href={htmlUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="text-xs capitalize"
+        >
           Link do último rollback
         </a>
       </div>
     </>
   );
-}
+};
+
+export default Home;
